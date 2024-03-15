@@ -1,0 +1,8 @@
+<div class="cart--item-list-container">
+    <ul *ngIf="items.length > 0; else emptyCart" class="item-list cart--item-list">
+        <app-cart-item *ngFor="let item of items" [item]="item"></app-cart-item>
+    </ul>
+    <ng-template #emptyCart>
+        <p>Cart Empty</p>
+    </ng-template>
+</div>
